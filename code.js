@@ -12,4 +12,11 @@ function sayHello(input){
     }
 }
 // console.log(sayHello(2.3));
+function isFive(input) {
+    if (input === 5) {
+        return true;
+    } else{
+        return false;
+    }
+}
 
