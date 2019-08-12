@@ -21,10 +21,7 @@ describe('sayHello', function() {
         expect(typeof sayHello()).toBe("string");
     });
     it('should return the string "Hello, Jane!" when executed', function(){
-        expect(sayHello()).toBe("Hello, Jane!");
-    });
-    it('should never return "undefined" when called', function(){
-        expect(sayHello()).not.toBe(undefined)
+        expect(sayHello("Jane")).toBe("Hello, Jane!");
     });
     it('should never return "null" when called,', function(){
         expect(sayHello()).not.toBe("null");
@@ -35,4 +32,19 @@ describe('sayHello', function() {
     it('should return string "Hello Pat!" when when Pat is input', function(){
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
+    it('should return the string "Hello, World!" when executed', function() {
+        expect(sayHello()).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when input is boolean true', function() {
+        expect(sayHello(true)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when input is boolean false', function() {
+        expect(sayHello(false)).toBe("Hello, World!");
+    });
+    it('should not accept an empty string when executed',function() {
+        expect(sayHello()).not.toBe("");
+    });
+    // it('should return "Input cannot be a number" if passed a number or numeric string', function() {
+    //     expect(sayHello(parseFloat)).toBe("Input cannot be a number.");
+    // });
 });
